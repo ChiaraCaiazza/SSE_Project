@@ -1,0 +1,105 @@
+<!-- ottieniListaAttrazioni request-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:ottieniListaAttrazioni>
+         <axis:args0>Indirizzo offerta</axis:args0>
+      </axis:ottieniListaAttrazioni>
+   </soapenv:Body>
+</soapenv:Envelope>
+<!-- ottieniListaAttrazioni response-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:ottieniListaAttrazioniResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Lista di attrazioni ordinata per distanza</ns:return>
+      </ns:ottieniListaAttrazioniResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- suggerisciListaPropostaAttivita request-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:suggerisciListaPropostaAttivita>
+         <axis:args0>Informazioni soggiorno</axis:args0>
+         <axis:args1>Classi attrazioni</axis:args1>
+      </axis:suggerisciListaPropostaAttivita>
+   </soapenv:Body>
+</soapenv:Envelope>
+<!-- suggerisciListaPropostaAttivita response-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:suggerisciListaPropostaAttivitaResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Riferimento alla lista proposta attivita generata</ns:return>
+      </ns:suggerisciListaPropostaAttivitaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- visualizzaListaPropostaAttivita request-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:visualizzaListaPropostaAttivita>
+         <axis:args0>AKL32D11</axis:args0>
+      </axis:visualizzaListaPropostaAttivita>
+   </soapenv:Body>
+</soapenv:Envelope>
+<!-- visualizzaListaPropostaAttivita response-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:visualizzaListaPropostaAttivitaResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Lista proposta attivita</ns:return>
+      </ns:visualizzaListaPropostaAttivitaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- aggiungiAlternative request-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:aggiungiAlternative>
+         <axis:args0>Lista proposta attivita</axis:args0>
+         <!--Zero or more repetitions:-->
+         <axis:args1>false</axis:args1>
+         <axis:args1>false</axis:args1>
+		 <axis:args1>true</axis:args1>
+	     <axis:args1>false</axis:args1>
+      </axis:aggiungiAlternative>
+   </soapenv:Body>
+</soapenv:Envelope>
+<!-- aggiungiAlternative response-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:aggiungiAlternativeResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Lista proposta attivita modificata</ns:return>
+      </ns:aggiungiAlternativeResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- rimuoviAlternative request-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:rimuoviAlternative>
+         <axis:args0>Lista proposta attivita</axis:args0>
+         <!--Zero or more repetitions:-->
+         <axis:args1>true</axis:args1>
+         <axis:args1>false</axis:args1>
+         <axis:args1>false</axis:args1>
+         <axis:args1>false</axis:args1>
+         <axis:args1>true</axis:args1>
+         <axis:args1>false</axis:args1>
+         <axis:args1>false</axis:args1>
+         <axis:args1>false</axis:args1>
+      </axis:rimuoviAlternative>
+   </soapenv:Body>
+</soapenv:Envelope>
+<!-- rimuoviAlternative response-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:rimuoviAlternativeResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Lista proposta attivita modificata</ns:return>
+      </ns:rimuoviAlternativeResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+

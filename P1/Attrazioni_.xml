@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Attrazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Attrazioni_.xsd">
+
+	<ListaPropostaAttivita>
+		<propostaID>AKL32D11</propostaID>
+		<statoProposta>2</statoProposta>
+		
+		<InformazioniSoggiorno>
+			<indirizzo>84 Caledonian Rd Kings Cross, London N1 9DN Regno Unito UK</indirizzo>
+			<dataInizio>2017-06-09</dataInizio>
+			<dataFine>2017-06-29</dataFine>
+		</InformazioniSoggiorno>
+		
+		<PropostaAttivita>
+			<data>2017-06-10</data>
+			<oraInizio>08:00:00</oraInizio>
+			<oraFine>12:00:00</oraFine>
+			
+			<ListaAttrazioni>
+			
+			<Attrazione>
+				<nome>Torre di Londra</nome>
+				<categoria>Siti storici, siti d'interesse</categoria>
+				<indirizzo>Tower Hill, Londra EC3N4AB</indirizzo>
+				<distanza unitaMisura="Km">5.3</distanza>
+			</Attrazione>
+			
+			<Attrazione>
+				<nome>British Museum</nome>
+				<categoria>Musei</categoria>
+				<indirizzo>Great Russell Street, WC1B 3DG</indirizzo>
+				<distanza unitaMisura="Km">2.6</distanza>
+			</Attrazione>
+			
+			</ListaAttrazioni>
+			
+		</PropostaAttivita>
+		
+		<PropostaAttivita>
+			<data>2017-06-10</data>
+			<oraInizio>12:00:00</oraInizio>
+			<oraFine>17:00:00</oraFine>
+			
+			<ListaAttrazioni>
+			
+			<Attrazione>
+				<nome>Fishers Fish and Chips</nome>
+				<categoria>Ristoranti</categoria>
+				<indirizzo>19 Fulham High Street, Londra SW6 3JH</indirizzo>
+				<distanza unitaMisura="Km">4.7</distanza>
+			</Attrazione>
+			
+			</ListaAttrazioni>
+			
+		</PropostaAttivita>
+		
+		<PropostaAttivita>
+			<data>2017-06-10</data>
+			<oraInizio>17:00:00</oraInizio>
+			<oraFine>20:00:00</oraFine>
+			
+			<ListaAttrazioni>
+			
+			<Attrazione>
+				<nome>London Zoo</nome>
+				<categoria>Zoo e acquari</categoria>
+				<indirizzo>Regents Park, NW1 4RY</indirizzo>
+				<distanza unitaMisura="Km">4.3</distanza>
+			</Attrazione>
+			
+			<Attrazione>
+				<nome>National Gallery</nome>
+				<categoria>Musei</categoria>
+				<indirizzo>Trafalgar Square, WC2N 5DN</indirizzo>
+				<distanza unitaMisura="Km">4.2</distanza>
+			</Attrazione>
+			
+			<Attrazione>
+				<nome>Big Ben</nome>
+				<categoria>Siti d'interesse</categoria>
+				<indirizzo>Westminster, Londra SW1A 0AA</indirizzo>
+				<distanza unitaMisura="Km">5.5</distanza>
+			</Attrazione>
+			
+			</ListaAttrazioni>
+			
+		</PropostaAttivita>
+		
+	</ListaPropostaAttivita>
+	
+</Attrazioni>

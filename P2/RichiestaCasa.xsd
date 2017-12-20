@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="RichiestaCasa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ListaRichiestaImmobile" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="RichiestaImmobile" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="PropostaImmobile" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element  name="ListaRichiestaImmobile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RichiestaImmobile" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="RichiestaImmobile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="InfoRichiedente" minOccurs="1" maxOccurs="1"></xs:element>
+				<xs:element name="citta" type="xs:string"></xs:element>
+				<xs:element name="stato" type="xs:string"></xs:element>
+				<xs:element name="inizio" type="xs:date"></xs:element>
+				<xs:element name="fine" type="xs:date"></xs:element>
+				<xs:element ref="DescrizioneImmobile" minOccurs="1" maxOccurs="1"></xs:element>
+				<xs:element ref="Limitazione" minOccurs="1" maxOccurs="unbounded"></xs:element>
+				<xs:element ref="Trasporto" minOccurs="1" maxOccurs="1"></xs:element>
+				<xs:element ref="ClasseAttrazione" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="PropostaImmobile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="InfoRichiedente" minOccurs="1" maxOccurs="1"></xs:element>
+				<xs:element name="inizio" type="xs:date"></xs:element>
+				<xs:element name="fine" type="xs:date"></xs:element>
+				<xs:element name="contesto" type="xs:string"></xs:element>
+				<xs:element name="foto" type="xs:string"></xs:element>
+				<xs:element ref="DescrizioneImmobile" minOccurs="1" maxOccurs="1"></xs:element>
+				<xs:element ref="Limitazione" minOccurs="1" maxOccurs="unbounded"></xs:element>
+				<xs:element ref="Trasporto" minOccurs="1" maxOccurs="1"></xs:element>
+				<xs:element ref="Indirizzo" minOccurs="1" maxOccurs="1"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="InfoRichiedente">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="richiedenteID">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[a-zA-Z0-9]{6}" />
+							</xs:restriction>
+						</xs:simpleType>
+				</xs:element>
+				<xs:element name="telefono" type="xs:string"></xs:element>
+				<xs:element name="cellulare" type="xs:string"></xs:element>
+				<xs:element name="email" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="DescrizioneImmobile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tipologia" type="xs:string"></xs:element>
+				<xs:element name="postiLetto" type="xs:int"></xs:element>
+				<xs:element name="bagni" type="xs:int"></xs:element>
+				<xs:element name="piscina" type="xs:boolean"></xs:element>
+				<xs:element name="garage" type="xs:boolean"></xs:element>
+				<xs:element name="terrazzo" type="xs:boolean"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="ClasseAttrazione">
+		<xs:complexType >
+			<xs:sequence>
+				<xs:element name="nome" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Limitazione">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nome" type="xs:string"></xs:element>
+				<xs:element name="permesso" type="xs:boolean"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Trasporto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="mezziPubblici" type="xs:boolean"></xs:element>
+				<xs:element name="condivisioneAuto" type="xs:boolean"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Indirizzo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="citta" type="xs:string"></xs:element>
+				<xs:element name="stato" type="xs:string"></xs:element>
+				<xs:element name="via" type="xs:string"></xs:element>
+				<xs:element name="nCivico" type="xs:string"></xs:element>
+				<xs:element name="cap" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

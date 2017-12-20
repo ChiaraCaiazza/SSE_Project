@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Attrazioni">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ListaPropostaAttivita" minOccurs="1" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ListaPropostaAttivita">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="propostaID">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[0-9A-Z]*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="statoProposta" type="xs:int">
+				</xs:element>
+				<xs:element ref="InformazioniSoggiorno" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="PropostaAttivita" minOccurs="1" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InformazioniSoggiorno">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="indirizzo" type="xs:string">
+				</xs:element>
+				<xs:element name="dataInizio" type="xs:date">
+				</xs:element>
+				<xs:element name="dataFine" type="xs:date">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PropostaAttivita">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="data" type="xs:date">
+				</xs:element>
+				<xs:element name="oraInizio" type="xs:time">
+				</xs:element>
+				<xs:element name="oraFine" type="xs:time">
+				</xs:element>
+				<xs:element ref="ListaAttrazioni" minOccurs="1" maxOccurs="1">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ListaAttrazioni">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Attrazione" minOccurs="0" maxOccurs="unbounded">
+					</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Attrazione">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nome" type="xs:string">
+				</xs:element>
+				<xs:element name="categoria" type="xs:string">
+				</xs:element>
+				<xs:element name="indirizzo" type="xs:string">
+				</xs:element>
+				<xs:element name="distanza">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:float">
+								<xs:attribute name="unitaMisura" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

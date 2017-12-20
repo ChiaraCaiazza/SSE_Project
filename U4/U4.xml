@@ -1,0 +1,41 @@
+<--! pubblicaPropostaScambio request -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:pubblicaPropostaScambio>
+         <axis:args0>Questo è un oggetto Offerta</axis:args0>
+         <axis:args1>Questo è un oggetto ContattiRichiedente</axis:args1>
+      </axis:pubblicaPropostaScambio>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<--! pubblicaPropostaScambio response -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:pubblicaPropostaScambioResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>La proposta e' stata effettuata con successo.</ns:return>
+      </ns:pubblicaPropostaScambioResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<--! ricercaOfferte request -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:ricercaOfferte>
+         <axis:args0>Questo è l'indirizzo</axis:args0>
+         <axis:args1>Questo è una limitazione</axis:args1>
+         <axis:args2>Questa è un oggetto di classe Trasporto</axis:args2>
+         <axis:args3>Questa è la descrizione della composizione della casa</axis:args3>
+      </axis:ricercaOfferte>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<--! ricercaOfferte response -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:ricercaOfferteResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Lista di offerte pertinenti con i parametri di ricerca.</ns:return>
+      </ns:ricercaOfferteResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RichiestaCasa.xml -->
+<RichiestaCasa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="RichiestaCasa.xsd">
+	<ListaRichiestaImmobile>
+		<RichiestaImmobile>
+			<InfoRichiedente>
+				<richiedenteID>a6f789</richiedenteID>
+				<telefono>0583-2473849</telefono>
+				<cellulare>+39 34687598</cellulare>
+				<email>cip93uzza@gmail.com</email>
+			</InfoRichiedente>
+			<citta>Stoccolma</citta>
+			<stato>Svezia</stato>
+			<inizio>2018-01-02</inizio>
+			<fine>2018-03-10</fine>
+			<DescrizioneImmobile>
+				<tipologia>Cottage</tipologia>
+				<postiLetto>4</postiLetto>
+				<bagni>2</bagni>
+				<piscina>false</piscina>
+				<garage>true</garage>
+				<terrazzo>true</terrazzo>
+			</DescrizioneImmobile>
+			<Limitazione>
+				<nome>Fumatore</nome>
+				<permesso>true</permesso>
+			</Limitazione>
+			<Limitazione>
+				<nome>Bambini piccoli</nome>
+				<permesso>false</permesso>
+			</Limitazione>
+			<Limitazione>
+				<nome>Animali</nome>
+				<permesso>false</permesso>
+			</Limitazione>
+			<Limitazione>
+				<nome>Suonare notte</nome>
+				<permesso>true</permesso>
+			</Limitazione>
+			<Trasporto>
+				<mezziPubblici>true</mezziPubblici>
+				<condivisioneAuto>false</condivisioneAuto>
+			</Trasporto>
+			<ClasseAttrazione>
+				<nome>Concerti e spettacoli</nome>
+			</ClasseAttrazione>
+			<ClasseAttrazione>
+				<nome>Attività all'aperto'</nome>
+			</ClasseAttrazione>
+			<ClasseAttrazione>
+				<nome>Giochi d'azzardo</nome>
+			</ClasseAttrazione>
+		</RichiestaImmobile>
+		<RichiestaImmobile>
+			<InfoRichiedente>
+				<richiedenteID>3gg4f1</richiedenteID>
+				<telefono>0583-225849</telefono>
+				<cellulare>+39 3207074568</cellulare>
+				<email>james_claus@msn.com</email>
+			</InfoRichiedente>
+			<citta>Roma</citta>
+			<stato>Italia</stato>
+			<inizio>2017-10-13</inizio>
+			<fine>2017-11-13</fine>
+			<DescrizioneImmobile>
+				<tipologia>Villa</tipologia>
+				<postiLetto>6</postiLetto>
+				<bagni>2</bagni>
+				<piscina>true</piscina>
+				<garage>true</garage>
+				<terrazzo>true</terrazzo>
+			</DescrizioneImmobile>
+			<Limitazione>
+				<nome>Fumatore</nome>
+				<permesso>false</permesso>
+			</Limitazione>
+			<Limitazione>
+				<nome>Bambini piccoli</nome>
+				<permesso>true</permesso>
+			</Limitazione>
+			<Limitazione>
+				<nome>Animali</nome>
+				<permesso>true</permesso>
+			</Limitazione>
+			<Limitazione>
+				<nome>Suonare notte</nome>
+				<permesso>false</permesso>
+			</Limitazione>
+			<Trasporto>
+				<mezziPubblici>false</mezziPubblici>
+				<condivisioneAuto>true</condivisioneAuto>
+			</Trasporto>
+			<ClasseAttrazione>
+				<nome>Zoo e acquari</nome>
+			</ClasseAttrazione>
+			<ClasseAttrazione>
+				<nome>Attività all'aperto'</nome>
+			</ClasseAttrazione>
+			<ClasseAttrazione>
+				<nome>Parchi divertimento</nome>
+			</ClasseAttrazione>
+		</RichiestaImmobile>
+	</ListaRichiestaImmobile>
+	<PropostaImmobile>
+		<InfoRichiedente>
+			<richiedenteID>a6f789</richiedenteID>
+			<telefono>0583-2473849</telefono>
+			<cellulare>+39 34687598</cellulare>
+			<email>cip93uzza@gmail.com</email>
+		</InfoRichiedente>
+		<inizio>2018-01-03</inizio>
+		<fine>2018-03-03</fine>
+		<contesto>Itinerario : http://attrazioni.it/fd239dfk3n, Servizi : http://servizi.com/243hkg58</contesto>
+		<foto>http://image.org/57gf45</foto>
+		<DescrizioneImmobile>
+			<tipologia>Cottage</tipologia>
+			<postiLetto>4</postiLetto>
+			<bagni>2</bagni>
+			<piscina>true</piscina>
+			<garage>false</garage>
+			<terrazzo>true</terrazzo>
+		</DescrizioneImmobile>
+		<Limitazione>
+			<nome>Fumatore</nome>
+			<permesso>true</permesso>
+		</Limitazione>
+		<Limitazione>
+			<nome>Bambini piccoli</nome>
+			<permesso>true</permesso>
+		</Limitazione>
+		<Limitazione>
+			<nome>Animali</nome>
+			<permesso>true</permesso>
+		</Limitazione>
+		<Limitazione>
+			<nome>Suonare notte</nome>
+			<permesso>true</permesso>
+		</Limitazione>
+		<Trasporto>
+			<mezziPubblici>false</mezziPubblici>
+			<condivisioneAuto>false</condivisioneAuto>
+		</Trasporto>
+		<Indirizzo>
+			<citta>Stoccolma</citta>
+			<stato>Svezia</stato>
+			<via>Jakobsgatan</via>
+			<nCivico>23A</nCivico>
+			<cap>10055</cap>
+		</Indirizzo>
+	</PropostaImmobile>
+</RichiestaCasa>

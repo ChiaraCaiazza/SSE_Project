@@ -1,0 +1,138 @@
+<!-- richiesta creaProposta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:creaProposta>
+         <axis:args0>3gg89e</axis:args0>
+         <axis:args1>indirizzo</axis:args1>
+         <axis:args2>2017-04-09</axis:args2>
+         <axis:args3>2018-01-10</axis:args3>
+      </axis:creaProposta>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- risposta creaProposta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:creaPropostaResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Nuova proposta</ns:return>
+      </ns:creaPropostaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- richiesta gestisciProposta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:gestisciRichiesta>
+         <axis:args0>Proposta</axis:args0>
+      </axis:gestisciRichiesta>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- risposta gestisciProposta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:gestisciRichiestaResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>true</ns:return>
+      </ns:gestisciRichiestaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- richiesta modificaProposta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:modificaProposta>
+         <axis:args0>Proposta</axis:args0>
+      </axis:modificaProposta>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- risposta modificaProposta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:modificaPropostaResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Proposta modificata</ns:return>
+      </ns:modificaPropostaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- richiesta ottieniProposta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:ottieniProposta>
+         <axis:args0>3gg57i</axis:args0>
+         <axis:args1>indirizzo</axis:args1>
+         <axis:args2>2017-10-01</axis:args2>
+         <axis:args3>2018-03-02</axis:args3>
+      </axis:ottieniProposta>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- risposta ottieniProposta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:ottieniPropostaResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Proposta</ns:return>
+      </ns:ottieniPropostaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- richiesta ottieniRichiesta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:ottieniRichiesta>
+         <axis:args0>56rh83</axis:args0>
+         <axis:args1>Stoccolma</axis:args1>
+         <axis:args2>Svezia</axis:args2>
+         <axis:args3>2017-09-23</axis:args3>
+         <axis:args4>2018-11-02</axis:args4>
+      </axis:ottieniRichiesta>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- risposta ottieniRichiesta -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:ottieniRichiestaResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Richiesta</ns:return>
+      </ns:ottieniRichiestaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- richiesta ottieniRichiesteGestite -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:ottieniRichiesteGestite/>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- risposta ottieniRichiesteGestite -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:ottieniRichiesteGestiteResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Richieste gestite dall'agente</ns:return>
+      </ns:ottieniRichiesteGestiteResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- richiesta ottieniRichiesteNonGestite -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:ottieniRichiesteNonGestite/>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- risposta ottieniRichiesteNonGestite -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:ottieniRichiesteNonGestiteResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>Richieste non gestite</ns:return>
+      </ns:ottieniRichiesteNonGestiteResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

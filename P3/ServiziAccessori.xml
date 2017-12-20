@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiziAccessoriRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="ServiziAccessori.xsd">
+	<Pianificazione>
+		<IDPianificazione>ZfdG45</IDPianificazione>
+		<ListaServiziAccessori>
+			<Indirizzo>
+				<via>Cavour</via>
+				<CAP>56122</CAP>
+				<stato>Italia</stato>
+				<NCivico>4</NCivico>
+				<citta>Pisa</citta>
+			</Indirizzo>
+			<ServiziAccessori>
+				<nome>Giardinaggio</nome>
+			</ServiziAccessori>
+			<ServiziAccessori>
+				<nome>Babysitting</nome>
+			</ServiziAccessori>
+		</ListaServiziAccessori>
+	</Pianificazione>	
+	
+	<FasceOrarie>
+			<OrarioInizio>10:30:00</OrarioInizio>
+			<OrarioFine>12:00:00</OrarioFine>
+			<ServiziAccessori>
+				<nome>Giardinaggio</nome>
+			</ServiziAccessori>
+	</FasceOrarie>
+	<FasceOrarie>
+			<OrarioInizio>19:30:00</OrarioInizio>
+			<OrarioFine>23:00:00</OrarioFine>
+			<ServiziAccessori>
+				<nome>Babysitting</nome>
+			</ServiziAccessori>
+	</FasceOrarie>
+	
+</ServiziAccessoriRoot>
+
+		
+		
+	
+	
+
+
+	

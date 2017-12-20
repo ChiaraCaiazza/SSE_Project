@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OffertaCasa.xsd -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="ListaOffertaImmobile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="OffertaImmobile" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="OffertaImmobile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataInizioScambio" type="xs:date">
+				</xs:element>
+				<xs:element name="dataFineScambio" type="xs:date">
+				</xs:element>
+				<xs:element name="disponibilitaCondivisioneVeicolo" type="xs:boolean">
+				</xs:element>
+				<xs:element ref="Limitazioni" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="Descrizione" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="Indirizzo" minOccurs="1" maxOccurs="1">
+				</xs:element>
+				<xs:element ref="InfoRichiedente" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Limitazioni">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="divietoFumo" type="xs:boolean">
+				</xs:element>
+				<xs:element name="divietoAnimali" type="xs:boolean">
+				</xs:element>
+				<xs:element name="vincoliRumoriSerali" type="xs:boolean">
+				</xs:element>
+				<xs:element name="possibilitaAccoglienzaBambini" type="xs:boolean">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Descrizione">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tipologiaImmobile" type="xs:string">
+				</xs:element>
+				<xs:element name="foto" type="xs:string">
+				</xs:element>
+				<xs:element name="composizioneImmobile" type="xs:string">
+				</xs:element>
+				<xs:element name="descrizioneZona" type="xs:string">
+				</xs:element>
+				<xs:element name="collegamentiMezziPubblici" type="xs:string">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Indirizzo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="via" type="xs:string">
+				</xs:element>
+				<xs:element name="numeroCivico" type="xs:string">
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="CAP" type="xs:string" use="required">
+			</xs:attribute>
+			<xs:attribute name="citta" type="xs:string" use="required">
+			</xs:attribute>
+			<xs:attribute name="stato" type="xs:string" use="required">
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="InfoRichiedente">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nome" type="xs:string">
+				</xs:element>
+				<xs:element name="cognome" type="xs:string">
+				</xs:element>
+				<xs:element name="telefono" type="xs:string">
+				</xs:element>
+				<xs:element name="cellulare" type="xs:string">
+				</xs:element>
+				<xs:element name="indirizzoEmail" type="xs:string">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

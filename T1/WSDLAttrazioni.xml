@@ -1,0 +1,306 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://ws.apache.org/axis2" 
+xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" 
+targetNamespace="http://ws.apache.org/axis2">
+	<wsdl:documentation>InterfacciaAttrazioni</wsdl:documentation>
+	<wsdl:types>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" 
+		targetNamespace="http://ws.apache.org/axis2">
+			<xs:element name="visualizzaListaPropostaAttivita">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="visualizzaListaPropostaAttivitaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="suggerisciListaPropostaAttivita">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+						<xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="suggerisciListaPropostaAttivitaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniListaAttrazioni">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniListaAttrazioniResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="aggiungiAlternative">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="args1" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:complexType>
+			</xs:element>
+			<xs:element name="aggiungiAlternativeResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="rimuoviAlternative">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+						<xs:element maxOccurs="unbounded" minOccurs="0" name="args1" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="rimuoviAlternativeResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="suggerisciListaPropostaAttivitaRequest">
+		<wsdl:part name="parameters" element="ns:suggerisciListaPropostaAttivita"/>
+	</wsdl:message>
+	<wsdl:message name="suggerisciListaPropostaAttivitaResponse">
+		<wsdl:part name="parameters" element="ns:suggerisciListaPropostaAttivitaResponse"/>
+	</wsdl:message>
+	<wsdl:message name="rimuoviAlternativeRequest">
+		<wsdl:part name="parameters" element="ns:rimuoviAlternative"/>
+	</wsdl:message>
+	<wsdl:message name="rimuoviAlternativeResponse">
+		<wsdl:part name="parameters" element="ns:rimuoviAlternativeResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniListaAttrazioniRequest">
+		<wsdl:part name="parameters" element="ns:ottieniListaAttrazioni"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniListaAttrazioniResponse">
+		<wsdl:part name="parameters" element="ns:ottieniListaAttrazioniResponse"/>
+	</wsdl:message>
+	<wsdl:message name="visualizzaListaPropostaAttivitaRequest">
+		<wsdl:part name="parameters" element="ns:visualizzaListaPropostaAttivita"/>
+	</wsdl:message>
+	<wsdl:message name="visualizzaListaPropostaAttivitaResponse">
+		<wsdl:part name="parameters" element="ns:visualizzaListaPropostaAttivitaResponse"/>
+	</wsdl:message>
+	<wsdl:message name="aggiungiAlternativeRequest">
+		<wsdl:part name="parameters" element="ns:aggiungiAlternative"/>
+	</wsdl:message>
+	<wsdl:message name="aggiungiAlternativeResponse">
+		<wsdl:part name="parameters" element="ns:aggiungiAlternativeResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="InterfacciaAttrazioniPortType">
+		<wsdl:operation name="suggerisciListaPropostaAttivita">
+			<wsdl:input message="ns:suggerisciListaPropostaAttivitaRequest" 
+			wsaw:Action="urn:suggerisciListaPropostaAttivita"/>
+			<wsdl:output message="ns:suggerisciListaPropostaAttivitaResponse" 
+			wsaw:Action="urn:suggerisciListaPropostaAttivitaResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="rimuoviAlternative">
+			<wsdl:input message="ns:rimuoviAlternativeRequest" 
+			wsaw:Action="urn:rimuoviAlternative"/>
+			<wsdl:output message="ns:rimuoviAlternativeResponse" 
+			wsaw:Action="urn:rimuoviAlternativeResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniListaAttrazioni">
+			<wsdl:input message="ns:ottieniListaAttrazioniRequest"
+			wsaw:Action="urn:ottieniListaAttrazioni"/>
+			<wsdl:output message="ns:ottieniListaAttrazioniResponse" 
+			wsaw:Action="urn:ottieniListaAttrazioniResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="visualizzaListaPropostaAttivita">
+			<wsdl:input message="ns:visualizzaListaPropostaAttivitaRequest" 
+			wsaw:Action="urn:visualizzaListaPropostaAttivita"/>
+			<wsdl:output message="ns:visualizzaListaPropostaAttivitaResponse" 
+			wsaw:Action="urn:visualizzaListaPropostaAttivitaResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aggiungiAlternative">
+			<wsdl:input message="ns:aggiungiAlternativeRequest"
+			wsaw:Action="urn:aggiungiAlternative"/>
+			<wsdl:output message="ns:aggiungiAlternativeResponse" 
+			wsaw:Action="urn:aggiungiAlternativeResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="InterfacciaAttrazioniSoap11Binding" type="ns:InterfacciaAttrazioniPortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="suggerisciListaPropostaAttivita">
+			<soap:operation soapAction="urn:suggerisciListaPropostaAttivita" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rimuoviAlternative">
+			<soap:operation soapAction="urn:rimuoviAlternative" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniListaAttrazioni">
+			<soap:operation soapAction="urn:ottieniListaAttrazioni" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="visualizzaListaPropostaAttivita">
+			<soap:operation soapAction="urn:visualizzaListaPropostaAttivita" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aggiungiAlternative">
+			<soap:operation soapAction="urn:aggiungiAlternative" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="InterfacciaAttrazioniSoap12Binding" type="ns:InterfacciaAttrazioniPortType">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="suggerisciListaPropostaAttivita">
+			<soap12:operation soapAction="urn:suggerisciListaPropostaAttivita" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+			<wsdl:operation name="rimuoviAlternative">
+			<soap12:operation soapAction="urn:rimuoviAlternative" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniListaAttrazioni">
+			<soap12:operation soapAction="urn:ottieniListaAttrazioni" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="visualizzaListaPropostaAttivita">
+			<soap12:operation soapAction="urn:visualizzaListaPropostaAttivita" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aggiungiAlternative">
+			<soap12:operation soapAction="urn:aggiungiAlternative" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="InterfacciaAttrazioniHttpBinding" type="ns:InterfacciaAttrazioniPortType">
+		<http:binding verb="POST"/>
+		<wsdl:operation name="suggerisciListaPropostaAttivita">
+			<http:operation location="suggerisciListaPropostaAttivita"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rimuoviAlternative">
+			<http:operation location="rimuoviAlternative"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniListaAttrazioni">
+			<http:operation location="ottieniListaAttrazioni"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="visualizzaListaPropostaAttivita">
+			<http:operation location="visualizzaListaPropostaAttivita"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aggiungiAlternative">
+			<http:operation location="aggiungiAlternative"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="InterfacciaAttrazioni">
+		<wsdl:port name="InterfacciaAttrazioniHttpSoap11Endpoint" binding="ns:InterfacciaAttrazioniSoap11Binding">
+			<soap:address location="http://localhost:8080/axis2/services/InterfacciaAttrazioni.InterfacciaAttrazioniHttpSoap11Endpoint/"/>
+		</wsdl:port>
+		<wsdl:port name="InterfacciaAttrazioniHttpSoap12Endpoint" binding="ns:InterfacciaAttrazioniSoap12Binding">
+			<soap12:address location="http://localhost:8080/axis2/services/InterfacciaAttrazioni.InterfacciaAttrazioniHttpSoap12Endpoint/"/>
+		</wsdl:port>
+		<wsdl:port name="InterfacciaAttrazioniHttpEndpoint" binding="ns:InterfacciaAttrazioniHttpBinding">
+			<http:address location="http://localhost:8080/axis2/services/InterfacciaAttrazioni.InterfacciaAttrazioniHttpEndpoint/"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

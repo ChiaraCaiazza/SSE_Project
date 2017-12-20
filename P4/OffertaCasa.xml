@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OffertaCasa.xml -->
+<ListaOffertaImmobile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OffertaCasa.xsd">
+	<OffertaImmobile>
+		<dataInizioScambio>2017-11-10</dataInizioScambio>
+		<dataFineScambio>2018-04-23</dataFineScambio>
+		<disponibilitaCondivisioneVeicolo>true</disponibilitaCondivisioneVeicolo>
+		<Limitazioni>
+			<divietoFumo>false</divietoFumo>
+			<divietoAnimali>false</divietoAnimali>
+			<vincoliRumoriSerali>true</vincoliRumoriSerali>
+			<possibilitaAccoglienzaBambini>true</possibilitaAccoglienzaBambini>			
+		</Limitazioni>
+		<Descrizione>
+				<tipologiaImmobile>Attico</tipologiaImmobile>
+				<foto>OffertaCasa/imagehosting/Milano/pic=?"nsdSd454ghh"</foto>
+				<composizioneImmobile> Ampio e luminoso bilocale composto da ingresso in ampio soggiorno/pranzo con zona cottura, ampio balcone. Disimpegno zona notte, una camera matrimoniale con piccola cabina e balcone con affaccio su zona area verde, bagno con finestra, vasca e doccia. L'appartamento e' completamente e finemente arredato con mobili moderni, completo di ogni confort.  Presente una cantina finestrata ad uso esclusivo</composizioneImmobile>
+				<descrizioneZona>L'appartamento si trova in una zona centrale vicino al duomo, al teatro Gerolamo e al cinema The Space. Nelle immediate vicinanze sono presenti ristorante, pizzeria napoletana e risto-pub. L'appartamento, situato sul corso di Milano si trova nelle vicinanze di numerose attivita' commerciali.</descrizioneZona>
+				<collegamentiMezziPubblici>La dimora e' collegata alla linea blu della metro, e alla linea dei pulman. La stazione ferroviaria, sebbene lontana e' raggiungibile con facilita' utilizzando i collegamenti esistenti</collegamentiMezziPubblici>
+		</Descrizione>
+		<Indirizzo CAP="20121" citta="Milano" stato="Italia">
+			<via>Corso Vittorio Emanuele II</via>
+			<numeroCivico>12</numeroCivico>	
+		</Indirizzo>
+		<InfoRichiedente>
+			<nome>Mario</nome>
+			<cognome>Rossi</cognome>
+			<telefono>081-7654321</telefono>
+			<cellulare>334-1234567</cellulare>
+			<indirizzoEmail>mario.rossi@gmail.com</indirizzoEmail>
+		</InfoRichiedente>
+		<InfoRichiedente>
+			<nome>Luca</nome>
+			<cognome>Bianco</cognome>
+			<telefono>0587-3216547</telefono>
+			<cellulare>328-1324657</cellulare>
+			<indirizzoEmail>luca.bianco@gmail.com</indirizzoEmail>
+		</InfoRichiedente>
+	</OffertaImmobile>
+	<OffertaImmobile>
+		<dataInizioScambio>2018-11-13</dataInizioScambio>
+		<dataFineScambio>2018-11-30</dataFineScambio>
+		<disponibilitaCondivisioneVeicolo>false</disponibilitaCondivisioneVeicolo>
+		<Limitazioni>
+			<divietoFumo>false</divietoFumo>
+			<divietoAnimali>false</divietoAnimali>
+			<vincoliRumoriSerali>false</vincoliRumoriSerali>
+			<possibilitaAccoglienzaBambini>true</possibilitaAccoglienzaBambini>			
+		</Limitazioni>
+		<Descrizione>
+				<tipologiaImmobile>villa</tipologiaImmobile>
+				<foto>OffertaCasa/imagehosting/Milano/pic=?"nsDFCd454gz8"</foto>
+				<composizioneImmobile>Villa completamente ristrutturato ed arredato con ampio e curato giardino pavimentato. La villa e' composto da ingresso, salone, cucina (completamente arredata e completa di tutti gli elettrodomestici), camera, servizio, piccola depandance adibita a magazzino/lavanderia ed ampio giardino semiperimetrale.</composizioneImmobile>
+				<descrizioneZona>Zona traquilla e provvista di tutti i servizi a 20 minuti a piedi dal centro citta'.</descrizioneZona>
+				<collegamentiMezziPubblici>La villa e' collegata alla linea bus urbana e alla linea metropolitana. La stazione ed il centro storico sono facilmente raggiungibii utilizzando i mezzi pubblici</collegamentiMezziPubblici>
+		</Descrizione>
+		<Indirizzo CAP="20121" citta="Milano" stato="Italia" >
+			<via>Parco della Vittoria</via>
+			<numeroCivico>666</numeroCivico>
+		</Indirizzo>
+	</OffertaImmobile>
+</ListaOffertaImmobile>

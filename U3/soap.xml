@@ -1,0 +1,36 @@
+<!-- creaPianificazione request-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:creaPianificazione>
+         <axis:args0>10:30 12:30 14:30 16:00</axis:args0>
+      </axis:creaPianificazione>
+   </soapenv:Body>
+</soapenv:Envelope>
+<!-- creaPianificazione response-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:creaPianificazioneResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>pianificazione</ns:return>
+      </ns:creaPianificazioneResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- ottieniRiferimentoServiziAccessori request-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:ottieniRiferimentoServiziAccessori>
+         <axis:args0>via fardella</axis:args0>
+      </axis:ottieniRiferimentoServiziAccessori>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!-- ottieniRiferimentoServiziAccessori response-->
+	<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns:ottieniRiferimentoServiziAccessoriResponse xmlns:ns="http://ws.apache.org/axis2">
+         <ns:return>riferimento servizi accessori</ns:return>
+      </ns:ottieniRiferimentoServiziAccessoriResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

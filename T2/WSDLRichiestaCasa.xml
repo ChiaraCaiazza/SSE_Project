@@ -1,0 +1,415 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://ws.apache.org/axis2" 
+xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" 
+xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+targetNamespace="http://ws.apache.org/axis2">
+	<wsdl:documentation>InterfacciaRichiestaCasa</wsdl:documentation>
+	<wsdl:types>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" 
+		targetNamespace="http://ws.apache.org/axis2">
+			<xs:element name="creaProposta">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+						<xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+						<xs:element minOccurs="0" name="args2" nillable="true" type="xs:date"/>
+						<xs:element minOccurs="0" name="args3" nillable="true" type="xs:date"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="creaPropostaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniRichiesta">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+						<xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+						<xs:element minOccurs="0" name="args2" nillable="true" type="xs:string"/>
+						<xs:element minOccurs="0" name="args3" nillable="true" type="xs:date"/>
+						<xs:element minOccurs="0" name="args4" nillable="true" type="xs:date"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniRichiestaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="gestisciRichiesta">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="gestisciRichiestaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" type="xs:boolean"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniRichiesteGestite">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniRichiesteGestiteResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniProposta">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+						<xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+						<xs:element minOccurs="0" name="args2" nillable="true" type="xs:date"/>
+						<xs:element minOccurs="0" name="args3" nillable="true" type="xs:date"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniPropostaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniRichiesteNonGestite">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ottieniRichiesteNonGestiteResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="modificaProposta">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="modificaPropostaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ottieniRichiesteGestiteRequest">
+		<wsdl:part name="parameters" element="ns:ottieniRichiesteGestite"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniRichiesteGestiteResponse">
+		<wsdl:part name="parameters" element="ns:ottieniRichiesteGestiteResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniRichiestaRequest">
+		<wsdl:part name="parameters" element="ns:ottieniRichiesta"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniRichiestaResponse">
+		<wsdl:part name="parameters" element="ns:ottieniRichiestaResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniRichiesteNonGestiteRequest">
+		<wsdl:part name="parameters" element="ns:ottieniRichiesteNonGestite"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniRichiesteNonGestiteResponse">
+		<wsdl:part name="parameters" element="ns:ottieniRichiesteNonGestiteResponse"/>
+	</wsdl:message>
+	<wsdl:message name="creaPropostaRequest">
+		<wsdl:part name="parameters" element="ns:creaProposta"/>
+	</wsdl:message>
+	<wsdl:message name="creaPropostaResponse">
+		<wsdl:part name="parameters" element="ns:creaPropostaResponse"/>
+	</wsdl:message>
+	<wsdl:message name="gestisciRichiestaRequest">
+		<wsdl:part name="parameters" element="ns:gestisciRichiesta"/>
+	</wsdl:message>
+	<wsdl:message name="gestisciRichiestaResponse">
+		<wsdl:part name="parameters" element="ns:gestisciRichiestaResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniPropostaRequest">
+		<wsdl:part name="parameters" element="ns:ottieniProposta"/>
+	</wsdl:message>
+	<wsdl:message name="ottieniPropostaResponse">
+		<wsdl:part name="parameters" element="ns:ottieniPropostaResponse"/>
+	</wsdl:message>
+	<wsdl:message name="modificaPropostaRequest">
+		<wsdl:part name="parameters" element="ns:modificaProposta"/>
+	</wsdl:message>
+	<wsdl:message name="modificaPropostaResponse">
+		<wsdl:part name="parameters" element="ns:modificaPropostaResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="InterfacciaRichiestaCasaPortType">
+		<wsdl:operation name="ottieniRichiesteGestite">
+			<wsdl:input message="ns:ottieniRichiesteGestiteRequest" 
+			wsaw:Action="urn:ottieniRichiesteGestite"/>
+			<wsdl:output message="ns:ottieniRichiesteGestiteResponse" 
+			wsaw:Action="urn:ottieniRichiesteGestiteResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniRichiesta">
+			<wsdl:input message="ns:ottieniRichiestaRequest" 
+			wsaw:Action="urn:ottieniRichiesta"/>
+			<wsdl:output message="ns:ottieniRichiestaResponse" 
+			wsaw:Action="urn:ottieniRichiestaResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniRichiesteNonGestite">
+			<wsdl:input message="ns:ottieniRichiesteNonGestiteRequest" 
+			wsaw:Action="urn:ottieniRichiesteNonGestite"/>
+			<wsdl:output message="ns:ottieniRichiesteNonGestiteResponse" 
+			wsaw:Action="urn:ottieniRichiesteNonGestiteResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="creaProposta">
+			<wsdl:input message="ns:creaPropostaRequest" 
+			wsaw:Action="urn:creaProposta"/>
+			<wsdl:output message="ns:creaPropostaResponse" 
+			wsaw:Action="urn:creaPropostaResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="gestisciRichiesta">
+			<wsdl:input message="ns:gestisciRichiestaRequest" 
+			wsaw:Action="urn:gestisciRichiesta"/>
+			<wsdl:output message="ns:gestisciRichiestaResponse" 
+			wsaw:Action="urn:gestisciRichiestaResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniProposta">
+			<wsdl:input message="ns:ottieniPropostaRequest" 
+			wsaw:Action="urn:ottieniProposta"/>
+			<wsdl:output message="ns:ottieniPropostaResponse" 
+			wsaw:Action="urn:ottieniPropostaResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="modificaProposta">
+			<wsdl:input message="ns:modificaPropostaRequest" 
+			wsaw:Action="urn:modificaProposta"/>
+			<wsdl:output message="ns:modificaPropostaResponse" 
+			wsaw:Action="urn:modificaPropostaResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="InterfacciaRichiestaCasaSoap11Binding" type="ns:InterfacciaRichiestaCasaPortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="ottieniRichiesteGestite">
+			<soap:operation soapAction="urn:ottieniRichiesteGestite" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniRichiesta">
+			<soap:operation soapAction="urn:ottieniRichiesta" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniRichiesteNonGestite">
+			<soap:operation soapAction="urn:ottieniRichiesteNonGestite" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="creaProposta">
+			<soap:operation soapAction="urn:creaProposta" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="gestisciRichiesta">
+			<soap:operation soapAction="urn:gestisciRichiesta" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniProposta">
+			<soap:operation soapAction="urn:ottieniProposta" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="modificaProposta">
+			<soap:operation soapAction="urn:modificaProposta" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="InterfacciaRichiestaCasaSoap12Binding" type="ns:InterfacciaRichiestaCasaPortType">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="ottieniRichiesteGestite">
+			<soap12:operation soapAction="urn:ottieniRichiesteGestite" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniRichiesta">
+			<soap12:operation soapAction="urn:ottieniRichiesta" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniRichiesteNonGestite">
+			<soap12:operation soapAction="urn:ottieniRichiesteNonGestite" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="creaProposta">
+			<soap12:operation soapAction="urn:creaProposta" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="gestisciRichiesta">
+			<soap12:operation soapAction="urn:gestisciRichiesta" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniProposta">
+			<soap12:operation soapAction="urn:ottieniProposta" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="modificaProposta">
+			<soap12:operation soapAction="urn:modificaProposta" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="InterfacciaRichiestaCasaHttpBinding" type="ns:InterfacciaRichiestaCasaPortType">
+		<http:binding verb="POST"/>
+		<wsdl:operation name="ottieniRichiesteGestite">
+			<http:operation location="ottieniRichiesteGestite"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniRichiesta">
+			<http:operation location="ottieniRichiesta"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniRichiesteNonGestite">
+			<http:operation location="ottieniRichiesteNonGestite"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="creaProposta">
+			<http:operation location="creaProposta"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="gestisciRichiesta">
+			<http:operation location="gestisciRichiesta"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ottieniProposta">
+			<http:operation location="ottieniProposta"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="modificaProposta">
+			<http:operation location="modificaProposta"/>
+			<wsdl:input>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:content type="application/xml" part="parameters"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="InterfacciaRichiestaCasa">
+		<wsdl:port name="InterfacciaRichiestaCasaHttpSoap11Endpoint" binding="ns:InterfacciaRichiestaCasaSoap11Binding">
+			<soap:address location="http://localhost:8080/axis2/services/InterfacciaRichiestaCasa.InterfacciaRichiestaCasaHttpSoap11Endpoint/"/>
+		</wsdl:port>
+		<wsdl:port name="InterfacciaRichiestaCasaHttpSoap12Endpoint" binding="ns:InterfacciaRichiestaCasaSoap12Binding">
+			<soap12:address location="http://localhost:8080/axis2/services/InterfacciaRichiestaCasa.InterfacciaRichiestaCasaHttpSoap12Endpoint/"/>
+		</wsdl:port>
+		<wsdl:port name="InterfacciaRichiestaCasaHttpEndpoint" binding="ns:InterfacciaRichiestaCasaHttpBinding">
+			<http:address location="http://localhost:8080/axis2/services/InterfacciaRichiestaCasa.InterfacciaRichiestaCasaHttpEndpoint/"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
